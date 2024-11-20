@@ -57,3 +57,79 @@ function validarForcSenha() {
     barra.style.backgroundColor = cores[forca - 1] || "red";
     mensagemForca.textContent = niveis[forca - 1] || "Muito Fraca"; 
 }
+
+// const filtroSenha = document.getElementById('senha');
+// const exibirSenha = document.getElementById('btSenha');
+
+// exibirSenha.addEventListener('click', () => {
+
+//     const type = filtroSenha.type === 'password' ? 'text' : 'password';
+//     filtroSenha.type = type;
+
+//     exibirSenha.textContent = type === 'password' ? '👁️' : '🙈';
+// });
+
+// const filtroSenha = document.getElementById('senha');
+// const exibirSenha = document.getElementById('btSenha');
+
+// exibirSenha.addEventListener('click', () => {
+//     const type = filtroSenha.type === 'password' ? 'text' : 'password';
+//     filtroSenha.type = type;
+//     const senhaIc = document.createElement('img');
+
+//     if (type === 'password') {
+//         senhaIc.src = 'src/img/passClosed.png'; 
+//     } else {
+//         senhaIc.src = 'src/img/passOpen.png';
+//     }
+
+//     exibirSenha.textContent = '';
+//     exibirSenha.appendChild(senhaIc);
+// });
+
+// const filtroConfSenha = document.getElementById('confSenha'); 
+// const exibirConfSenha = document.getElementById('btConfSenha');
+
+// exibirConfSenha.addEventListener('click', () => {
+//     const type = filtroConfSenha.type === 'password' ? 'text' : 'password';
+//     filtroConfSenha.type = type;
+//     const senhaIc = document.createElement('img');
+
+//     if (type === 'password') {
+//         senhaIc.src = 'src/img/passClosed.png'; 
+//     } else {
+//         senhaIc.src = 'src/img/passOpen.png';
+//     }
+
+//     exibirConfSenha.textContent = '';
+//     exibirConfSenha.appendChild(senhaIc);
+// });
+
+
+function btExibir (btTrocar, exibirPass) {
+    const type = btTrocar.type === 'password' ? 'text' : 'password';
+    btTrocar.type = type;
+
+    const senhaIc = document.createElement('img');
+    if (type === 'password') {
+        senhaIc.src = 'src/img/passClosed.png';
+    } else {
+        senhaIc.src = 'src/img/passOpen.png';
+    }
+
+    exibirPass.textContent = '';
+    exibirPass.appendChild(senhaIc);
+}
+
+const filtroSenha = document.getElementById('senha');
+const filtroConfSenha = document.getElementById('confSenha'); 
+const exibirSenha = document.getElementById('btSenha');
+const exibirConfSenha = document.getElementById('btConfSenha');
+
+exibirSenha.addEventListener('click', () => {
+    btExibir(filtroSenha, exibirSenha); 
+});
+
+exibirConfSenha.addEventListener('click', () => {
+    btExibir(filtroConfSenha, exibirConfSenha); 
+});

@@ -17,15 +17,29 @@ body{
     text-align: center;
 }
 
-h1{
+#cadastroTitulo {
     color: blue;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
+    font-size: 40px;
+    position: relative;
+    text-shadow: 0px 4px 10px #4e4e4e;
+}
+
+#cadastroTitulo::before {
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 65%;
+    background: blue;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 label{
     display: block;
     margin: 5px 0 5px;
-    color: grey;
+    color: black;
     text-align: left;;
 }
 
@@ -36,6 +50,38 @@ input{
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 14px;
+}
+
+.containerSenha {
+    position: relative;
+    width: 100%;
+}
+
+/* .senha {
+    width: 100%;
+    padding: 10px;
+    padding-right: 40px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+} */
+
+.containerSenha img {
+    max-width: 15px;
+}
+
+.btSenha {
+    position: absolute;
+    top: 35%;
+    right: 10px;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 0;
 }
 
 #barra {
@@ -61,7 +107,7 @@ input{
     margin: 0 0 20px;
 }
 
-button{
+#btCadastro{
     background-color: darkcyan;
     color: white;
     border: none;
@@ -71,7 +117,7 @@ button{
     font-size: 18px;
 }
 
-button:hover{
+#btCadastro:hover{
     background-color: darkgreen;
 }
 
