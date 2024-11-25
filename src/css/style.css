@@ -1,11 +1,30 @@
 body {
   font-family: Arial, sans-serif;
   background-color: darkblue;
+  color: black;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   margin: 0;
+  padding: 0;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#btDarkMode {
+    padding: 5px;
+    cursor: pointer;
+    border: none;
+}
+
+#lightMode{
+  height: 25px;
+  width: 50px;
+}
+
+body.darkMode {
+    background-color: #121212;
+    color: whitesmoke;
 }
 
 .container {

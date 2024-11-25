@@ -84,3 +84,16 @@ exibirSenha.addEventListener('click', () => {
 exibirConfSenha.addEventListener('click', () => {
     btExibir(filtroConfSenha, exibirConfSenha);
 });
+
+const btDarkMode = document.getElementById('btDarkMode');
+const darkMode = document.getElementById('lightMode');
+
+btDarkMode.addEventListener('click', () => {
+    document.body.classList.toggle('darkMode');
+
+    if (document.body.classList.contains('darkMode')) {
+        darkMode.src = 'src/img/darkMode.png';
+    } else {
+        darkMode.src = 'src/img/lightMode.png';
+    }
+});

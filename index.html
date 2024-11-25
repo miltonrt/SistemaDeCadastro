@@ -12,8 +12,12 @@
 
 <body>
     <div class="container">
+        <button type="button" class="btDarkMode" id="btDarkMode">
+            <img id="lightMode" src="src/img/lightMode.png" alt="Modo escuro">
+        </button>
+
         <h1 id="cadastroTitulo">Cadastro</h1>
-        <form id="cadastro" method="POST" action="/APISistemaDeCadastro/cadastro.php">
+        <form id="cadastro" method="POST" action="API_SistemaDeCadastro/cadastro.php">
             <label for="email">E-mail:</label>
             <input type="email" name="email" id="email" placeholder="Digite seu email" required>
 
@@ -21,8 +25,7 @@
             <label for="senha">Senha:</label>
             <div class="containerSenha">
                 <input type="password" name="senha" id="senha" placeholder="Digite sua senha" required>
-                <button type="button" class="btSenha" id="btSenha"><img id="icPassClosed" src="src/img/passClosed.png"
-                        alt="Senha oculta"></button>
+                <button type="button" class="btSenha" id="btSenha"><img id="icPassClosed" src="src/img/passClosed.png" alt="Senha oculta"></button>
             </div>
             <div id="barra">
                 <div id="forca"></div>
